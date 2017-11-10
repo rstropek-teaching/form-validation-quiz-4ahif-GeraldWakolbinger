@@ -16,28 +16,28 @@
         <form>
             <div class="form-group">
                 <label for="firstName">First name:</label>
-                <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+                <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" onkeyup ="checkInput('firstName')">
                 <div id="firstNameMandatory" class="alert alert-warning">
                     First name is mandatory
                 </div>
             </div>
             <div class="form-group">
                 <label for="lastName">Last name:</label>
-                <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+                <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" onkeyup ="checkInput('lastName')">
                 <div id="lastNameMandatory" class="alert alert-warning">
                     Last name is mandatory
                 </div>
             </div>
             <div class="form-group">
                 <label for="email">Email address:</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email address">
+                <input type="email" class="form-control" id="email" placeholder="Enter your email address" onkeyup ="checkInput('email')">
                 <div id="emailMandatory" class="alert alert-warning">
                     Email is mandatory if you want to receive our newsletter.
                 </small>
             </div>
             <div class="form-group">
                 <label for="mediaChannelSelect">How did you hear from us?</label>
-                <select class="form-control" id="mediaChannelSelect">
+                <select class="form-control" id="mediaChannelSelect" onChange ="checkSelect('mediaChannelSelect')">
                     <option>Internet</option>
                     <option>Press</option>
                     <option>Other</option>
@@ -48,11 +48,11 @@
             </div>
             <div class="form-check">
                 <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" id="newsletter">
+                    <input type="checkbox" class="form-check-input" id="newsletter" onclick ="checkCheckbox()">
                     Subscribe to newsletter
                 </label>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" id ="submitButton">Submit</button>
         </form>
     </div>
 
